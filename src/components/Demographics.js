@@ -1,70 +1,63 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {  Button, Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import axios from 'axios'
 
 
 
 
 function Demographics() {
-  const [Questions, setQuestions] = useState({ 
+  const [Questions, setQuestions] = useState({
+    Q1:"",
+    Q2:""
    
-    Q1: "",
-    Q2: "",
-    Q3: "",
-    Q4: "",
-    Q5:"",
-    Q6:"",
-    Q7:""
+
+
   });
 
   const handleAnswers = (event) => {
-    const target = event.target;
-    const name = target.name;
-    const value = target.value;
-    setQuestions({ ...Questions, [name]: value });
+
+    setQuestions({ ...Questions, [event.target.name]: event.target.value });
+
   };
-    
-    
-  
-
-   const handleSubmit = async (e) => {
-   e.preventDefault()
-
-    const response = await fetch ('http://localhost:4000/Demographics' , {
-      method : 'POST' ,
-      body : JSON.stringify ({
-        Q1:Questions.Q1,
-        Q2:Questions.Q2,
-        Q3:Questions.Q3,
-        Q4:Questions.Q4,
-       
-      }) ,
-      headers : {
-        'Content-Type' : 'application/json'
-      }
-      
-    })
-    const data = await response.json();
-    console.log(data)
-  
-   }
 
 
-   function check() {
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+
+    axios.post("http://localhost:4000/Demographics", Questions)
+      .then(function (response) {
+        console.log(response.data)
+        if(response.status = 200) {
+          naviagte("/Training")
+        }
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
+
+
+  }
+
+
+  function check() {
     const buttons = document.querySelectorAll("input[type='radio']");
     buttons.forEach((button) => {
       if (!button.checked) {
         button.setAttribute("required", "");
       }
+
     });
   }
-   const naviagte = useNavigate();
+  const naviagte = useNavigate();
 
-    return (
-        <div>
-             <Container
+  return (
+    <div>
+      <Container
         className="d-flex align-items-center justify-content-center "
         style={{ minHeight: "100vh" }}
       >
@@ -74,10 +67,7 @@ function Demographics() {
               onSubmit={handleSubmit}
               style={{ display: "flex", flexDirection: "column" }}
             >
-              <legend className="mb-3">
-                Please fill out this Questionair ?
-              </legend>
-              <div className="mb-3">
+             <div className="mb-3">
                 <label className="mb-3">What is your Gender?</label>
                 <p>
                   <input
@@ -153,97 +143,9 @@ function Demographics() {
                   45-60
                 </p>
               </div>
-              <div className="mb-3">
-                <label className="mb-3">What is your level of education?</label>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q3"
-                    value="No schooling"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  No schooling
-                </p>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q3"
-                    value="High School"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  High School
-                </p>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q3"
-                    value="College"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  College
-                </p>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q3"
-                    value="Bachelors Degree"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  Bachelors Degree
-                </p>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q3"
-                    value="Master Degree"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  Master Degree
-                </p>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q3"
-                    value="Doctorate Degree"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  Doctorate Degree
-                </p>
-              </div>
-              <div className="mb-3">
-                <label className="mb-3">
-                  Are you a native speaker of English?
-                </label>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q4"
-                    value="Yes"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  Yes
-                </p>
-                <p>
-                  <input
-                    type="radio"
-                    name="Q4"
-                    value="No"
-                    onChange={handleAnswers}
-                    className="me-2"
-                  />
-                  No
-                </p>
-              </div>
-            
+             
+             
 
-              <div style={{width:"500px"}}>
               <Button
                 type="submit"
                 className="mt-4 mb-4"
@@ -252,16 +154,16 @@ function Demographics() {
               >
                 Submit
               </Button>
-              </div>
-              
+
+
             </form>
           </div>
         </div>
       </Container>
-           
-            
-        </div>
-    );
+
+
+    </div>
+  );
 }
 
 export default Demographics;

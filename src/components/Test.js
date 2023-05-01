@@ -8,6 +8,7 @@ function Test() {
     <>
     <div>Here you will include the real Jitsi meet app</div>
     <JitsiMeeting 
+    domain = {"https://a4ajao.com/"}
     roomName={'FirstJitsi'} 
     getIFrameRef = { node => node.style.height = '800px' } 
     configOverwrite = {{
