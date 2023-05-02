@@ -14,7 +14,7 @@ function Test() {
     configOverwrite = {{
       toolbarButtons:['microphone','camera','chat','fullscreen', 'hangup','settings','toggle-camera'],}}
       />
-    <button onClick={()=>(navigate('https://a4ajao.com/Questionair'))}>Questionair</button>
+    <button onClick={()=>(navigate('/Questionair'))}>Questionair</button>
     
     </>
     

@@ -6,7 +6,7 @@ function Training() {
   return (
     <>
     <div>I am your jitsi training page</div>
-    <button onClick={()=>navigate('https://a4ajao.com/Test')}>Take Test</button>
+    <button onClick={()=>navigate('/Test')}>Take Test</button>
     
     </>
     
