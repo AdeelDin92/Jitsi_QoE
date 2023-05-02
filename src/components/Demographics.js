@@ -33,7 +33,7 @@ function Demographics() {
       .then(function (response) {
         console.log(response.data)
         if(response.status = 200) {
-          naviagte("/Training")
+          naviagte("https://a4ajao.com/Training")
         }
       })
       .catch(function (error) {

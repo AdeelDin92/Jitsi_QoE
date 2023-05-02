@@ -10,9 +10,9 @@ function Routing() {
       <BrowserRouter>
          <Routes>
             <Route path="/" element={<Demographics/>} />
-            <Route path="/Test" element={<Test/>} />
-            <Route path="/Training" element={<Training/>} />
-            <Route path="/Questionair" element={<Questionair/>} />
+            <Route path="https://a4ajao.com/Test" element={<Test/>} />
+            <Route path="https://a4ajao.com/Training" element={<Training/>} />
+            <Route path="https://a4ajao.com/Questionair" element={<Questionair/>} />
 
         </Routes>
       
