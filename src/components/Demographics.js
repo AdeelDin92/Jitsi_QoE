@@ -29,7 +29,7 @@ function Demographics() {
     e.preventDefault()
 
 
-    axios.post("http://localhost:4000/Demographics", Questions)
+    axios.post("https://jitsi-backend.onrender.com/", Questions)
       .then(function (response) {
         console.log(response.data)
         if(response.status = 200) {
