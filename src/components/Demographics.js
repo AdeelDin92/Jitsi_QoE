@@ -32,7 +32,9 @@ function Demographics() {
     axios.post("https://jitsi-backend.onrender.com/Demographics", Questions)
       .then(function (response) {
         console.log(response.data)
+        // eslint-disable-next-line 
         if(response.status = 200) {
+          
           naviagte("/Training")
         }
       })
