@@ -1,4 +1,4 @@
-import React from 'react'
+/*import React from 'react'
 import { useNavigate } from 'react-router'
 import { JitsiMeeting } from '@jitsi/react-sdk';
 
@@ -8,7 +8,8 @@ function Test() {
     <>
     <div>Here you will include the real Jitsi meet app</div>
     <JitsiMeeting 
-    
+
+    domain={"med54.rz.tu-ilmenau.de"}
     roomName={'FirstJitsi'} 
     getIFrameRef = { node => node.style.height = '800px' } 
     configOverwrite = {{
@@ -21,4 +22,14 @@ function Test() {
   )
 }
 
-export default Test
+export default Test */
+import React from 'react'
+function Test () {
+  return (
+    <>
+    <h3>Here next Questionair</h3>
+    </>
+  )
+}
+
+export default Test ;
