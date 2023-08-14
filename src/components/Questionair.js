@@ -28,7 +28,7 @@ function Questionair() {
     e.preventDefault()
 
 
-    axios.post("http://localhost:4000/Questionair", Questions)
+    axios.post("https://charming-loafers-fish.cyclic.cloud/Questionair", Questions)
     
       .then((response)=>{
         console.log("Data posted successfully",response.data)
@@ -123,20 +123,20 @@ function Questionair() {
                 Excellent
               </p>
             </div>
-            <div className="mb-3">
-              <label className="mb-3">How would you rate the video quality of the connection ? (Circle one)
-              </label>
-              <p>
-                <input
-                  type="radio"
-                  name="Q2"
-                  value="Bad"
-                  onChange={handleAnswers}
-                  className="me-2"
-                />
-                Bad
-              </p>
-              <p>
+              <div className="mb-3">
+                <label className="mb-3">How would you rate the video quality of the connection ? (Circle one)
+                </label>
+                <p>
+                  <input
+                    type="radio"
+                    name="Q2"
+                    value="Bad"
+                    onChange={handleAnswers}
+                    className="me-2"
+                  />
+                  Bad
+                </p>
+                <p>
                 <input
                   type="radio"
                   name="Q2"
