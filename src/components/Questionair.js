@@ -13,6 +13,8 @@ function Questionair() {
     Q4:"",
     Q5:"",
     Q6:"",
+    Q5_text:"",
+    Q6_text:""
     
   })
 
@@ -30,6 +32,7 @@ function Questionair() {
     
       .then((response)=>{
         console.log("Data posted successfully",response.data)
+        navigate("/PANAS")
       })
       .catch((error)=>{
         console.log("Error in submitting",error)
@@ -47,7 +50,7 @@ function Questionair() {
   }
 
 
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
 
 
 
@@ -306,6 +309,16 @@ function Questionair() {
                 />
                 Yes
               </p>
+              {Questions.Q5 === "Yes" && (
+                <textarea 
+                name ='Q5_text'
+                value = {Questions.Q5_text}
+                onChange={handleAnswers}
+                placeholder='Please provide details'
+                required
+                style={{width:"80%"}}
+                ></textarea>
+              )}
             </div>
             <div className="mb-3">
               <label className="mb-3">Was the connection acceptable? (Circle one)
@@ -331,6 +344,16 @@ function Questionair() {
                 />
                 Yes
               </p>
+              {Questions.Q6 === 'Yes' && (
+                  <textarea
+                    name="Q6_text"
+                    value={Questions.Q6_text}
+                    onChange={handleAnswers}
+                    placeholder="Please provide details"
+                    required
+                    style={{width:"80%"}}
+                  />
+                )}
             </div>
            
            

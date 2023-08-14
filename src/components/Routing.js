@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter , Routes, Route } from "react-router-dom";
 import Demographics from './Demographics';
 import Questionair from './Questionair';
-import Test from './Test'
+import PANAS from './PANAS';
 
 function Routing() {
   return (
@@ -10,7 +10,7 @@ function Routing() {
          <Routes>
             <Route path="/" element={<Demographics/>} />            
             <Route path="/Questionair" element={<Questionair/>} />
-            <Route path="/Test" element={<Test/>} />
+            <Route path="/PANAS" element={<PANAS/>} />
 
         </Routes>
       
