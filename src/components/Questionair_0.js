@@ -4,7 +4,7 @@ import { Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 
-function Questionair_0() {
+function QuestionaiR_0() {
 
   const[Questions,setQuestions] = useState({
     Q1:"",
@@ -380,4 +380,4 @@ function Questionair_0() {
   )
 }
 
-export default Questionair_0
+export default QuestionaiR_0

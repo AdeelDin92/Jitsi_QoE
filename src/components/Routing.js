@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter , Routes, Route } from "react-router-dom";
 import Demographics from './Demographics';
-import Questionair_0 from './Questionair_0';
+import QuestionaiR_0 from './Questionair_0';
 import Questionair_1 from './Questionair_1';
 import Questionair_2 from './Questionair_2';
 import Questionair_3 from './Questionair_3';
@@ -19,7 +19,7 @@ function Routing() {
       <BrowserRouter>
          <Routes>
             <Route path="/" element={<Demographics/>} />            
-            <Route path="/Questionair_0" element={<Questionair_0/>} />
+            <Route path="/QuestionaiR_0" element={<QuestionaiR_0/>} />
             <Route path="/PANAS_0" element={<PANAS_0/>} />
             <Route path="/Questionair_1" element={<Questionair_1/>} />
             <Route path="/Questionair_2" element={<Questionair_2/>} />
