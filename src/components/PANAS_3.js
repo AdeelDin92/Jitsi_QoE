@@ -1,11 +1,12 @@
 
 import React, { useState } from 'react'
 import { Button, Container } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 
 
-function PANAS () { 
+function PANAS_3 () { 
 
 
   // State to store the selected Positive And Negative values for each PANAS item
@@ -43,10 +44,11 @@ function PANAS () {
 
 
 
-      axios.post('https://charming-loafers-fish.cyclic.cloud/submit_panas', formData)
+      axios.post('http://localhost:4000/submit_panas_3', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         // Do any further actions upon successful submission if needed
+        navigate("/End")
       })
       .catch((error) => {
         console.error('Error submitting form:', error);
@@ -54,7 +56,7 @@ function PANAS () {
       });
   }
 
-
+  const navigate = useNavigate();
 
 
 
@@ -242,4 +244,4 @@ function PANAS () {
 
 }
 
-export default PANAS;
+export default PANAS_3;

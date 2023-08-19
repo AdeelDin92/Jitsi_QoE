@@ -32,7 +32,7 @@ function Demographics() {
     // Handle form submission and API call here
     // Send formData to the server for processing
 
-    fetch('https://charming-loafers-fish.cyclic.cloud/Demographics', {
+    fetch('http://localhost:4000/Demographics', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ function Demographics() {
         // Handle the server response if needed
         console.log('Data posted successfully:', data);
         // Reset the form after successful submission
-        naviagte("/Questionair")
+        naviagte("/Questionair_0")
       
       })
       .catch((error) => {
