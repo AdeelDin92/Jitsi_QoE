@@ -4,7 +4,7 @@ import { Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 
-function Questionair_2() {
+function Questionair2() {
 
   const[Questions,setQuestions] = useState({
     Q1:"",
@@ -32,7 +32,7 @@ function Questionair_2() {
     
       .then((response)=>{
         console.log("Data posted successfully",response.data)
-        navigate("/PANAS_2")
+        navigate("/PANAS2")
       })
       .catch((error)=>{
         console.log("Error in submitting",error)
@@ -65,7 +65,7 @@ function Questionair_2() {
       <div className="w-100 mt-3" style={{ maxWidth: "1000px" }}>
         <div className="form-container" >
           <h2 className='text-center mb-5'>Please answer these questions</h2>
-          <h4>Round 3</h4>
+          <h4>Round 2</h4>
           <form
             onSubmit={handleSubmit}
             style={{ display: "flex", flexDirection: "column" }}
@@ -380,4 +380,4 @@ function Questionair_2() {
   )
 }
 
-export default Questionair_2
+export default Questionair2

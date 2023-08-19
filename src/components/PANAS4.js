@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 
 
-function PANAS_2 () { 
+function PANAS4 () { 
 
 
   // State to store the selected Positive And Negative values for each PANAS item
@@ -44,11 +44,11 @@ function PANAS_2 () {
 
 
 
-      axios.post('http://localhost:4000/submit_panas_2', formData)
+      axios.post('http://localhost:4000/submit_panas_4', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         // Do any further actions upon successful submission if needed
-        navigate("/Questionair_3")
+        navigate("/End")
       })
       .catch((error) => {
         console.error('Error submitting form:', error);
@@ -244,4 +244,4 @@ function PANAS_2 () {
 
 }
 
-export default PANAS_2;
+export default PANAS4;

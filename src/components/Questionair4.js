@@ -4,7 +4,7 @@ import { Button, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 
-function QuestionaiR_0() {
+function Questionair4() {
 
   const[Questions,setQuestions] = useState({
     Q1:"",
@@ -28,11 +28,11 @@ function QuestionaiR_0() {
     e.preventDefault()
 
 
-    axios.post("http://localhost:4000/Questionair_0", Questions)
+    axios.post("http://localhost:4000/Questionair_4", Questions)
     
       .then((response)=>{
         console.log("Data posted successfully",response.data)
-        navigate("/PANAS_0")
+        navigate("/PANAS4")
       })
       .catch((error)=>{
         console.log("Error in submitting",error)
@@ -65,7 +65,7 @@ function QuestionaiR_0() {
       <div className="w-100 mt-3" style={{ maxWidth: "1000px" }}>
         <div className="form-container" >
           <h2 className='text-center mb-5'>Please answer these questions</h2>
-          <h4>Round 1</h4>
+          <h4>Round 4</h4>
           <form
             onSubmit={handleSubmit}
             style={{ display: "flex", flexDirection: "column" }}
@@ -380,4 +380,4 @@ function QuestionaiR_0() {
   )
 }
 
-export default QuestionaiR_0
+export default Questionair4

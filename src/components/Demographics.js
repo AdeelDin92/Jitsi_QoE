@@ -49,7 +49,7 @@ function Demographics() {
         // Handle the server response if needed
         console.log('Data posted successfully:', data);
         // Reset the form after successful submission
-        naviagte("/Questionair_0")
+        naviagte("/Questionair1")
       
       })
       .catch((error) => {

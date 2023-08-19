@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios'
 
 
-function PANAS_0 () { 
+function PANAS1 () { 
 
 
   // State to store the selected Positive And Negative values for each PANAS item
@@ -44,11 +44,11 @@ function PANAS_0 () {
 
       //https://charming-loafers-fish.cyclic.cloud
 
-      axios.post('http://localhost:4000/submit_panas_0', formData)
+      axios.post('http://localhost:4000/submit_panas_1', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         // Do any further actions upon successful submission if needed
-        navigate("/Questionair_1")
+        navigate("/Questionair2")
       })
       .catch((error) => {
         console.error('Error submitting form:', error);
@@ -244,4 +244,4 @@ function PANAS_0 () {
 
 }
 
-export default PANAS_0;
+export default PANAS1;
