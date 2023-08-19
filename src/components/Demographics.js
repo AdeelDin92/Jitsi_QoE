@@ -32,7 +32,7 @@ function Demographics() {
     // Handle form submission and API call here
     // Send formData to the server for processing
 
-    fetch('https://gray-charming-turkey.cyclic.cloud/Demographics', {
+    fetch('https://drab-jade-bonobo-vest.cyclic.cloud/Demographics', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

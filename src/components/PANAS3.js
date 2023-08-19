@@ -44,7 +44,7 @@ function PANAS3 () {
 
 
 
-      axios.post('https://gray-charming-turkey.cyclic.cloud/submit_panas_3', formData)
+      axios.post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_3', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         // Do any further actions upon successful submission if needed
