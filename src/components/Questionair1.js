@@ -28,7 +28,7 @@ function Questionair1() {
     e.preventDefault()
 
 
-    axios.post("http://localhost:4000/Questionair_1", Questions)
+    axios.post("https://charming-loafers-fish.cyclic.cloud/Questionair_1", Questions)
     
       .then((response)=>{
         console.log("Data posted successfully",response.data)

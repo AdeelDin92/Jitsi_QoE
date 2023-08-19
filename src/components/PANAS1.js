@@ -44,7 +44,7 @@ function PANAS1 () {
 
       //https://charming-loafers-fish.cyclic.cloud
 
-      axios.post('http://localhost:4000/submit_panas_1', formData)
+      axios.post('https://charming-loafers-fish.cyclic.cloud/submit_panas_1', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         // Do any further actions upon successful submission if needed
