@@ -46,7 +46,7 @@ function PANAS2() {
         console.error('Error submitting form:', error);
       });
   };
-
+ // Modified
   const navigate = useNavigate();
 
   return (
