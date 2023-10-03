@@ -15,7 +15,12 @@ function Demographics() {
     Q4:"",
     Q5:"",
     Q6:"",
-    Q7:""
+    Q7:"",
+    Q8:"",
+    Q8_text:"",
+    Q9:"",
+    Q10:"",
+    Q10_text:""
    
 
 
@@ -409,6 +414,150 @@ function Demographics() {
                   </p>
                  
                   
+                  </div>
+                  <div className="mb-3">
+                   <label className='mb-3'>
+                   What type of device did you use for the video conference?
+                    </label>
+                   <p>
+                    <input type='radio'
+                    name="Q8"
+                    value="Laptop"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Laptop                 
+                  </p>
+                  <p>
+                    <input type='radio'
+                    name="Q8"
+                    value="Desktop computer"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Desktop computer                
+                  </p>
+                  <p>
+                    <input type='radio'
+                    name="Q8"
+                    value="Smartphone"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Smartphone                
+                  </p>
+                  <p>
+                    <input type='radio'
+                    name="Q8"
+                    value="Tablet"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Tablet               
+                  </p>
+                  <p>
+                    <input type='radio'
+                    name="Q8"
+                    value="Other"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Other (please specify)               
+                  </p>
+                  {Questions.Q8 === "Other" && (
+                <textarea 
+                name ='Q8_text'
+                value = {Questions.Q8_text}
+                onChange={handleAnswers}
+                placeholder='Please provide details'
+                required
+                style={{width:"80%"}}
+                ></textarea>
+                )}            
+              </div>
+              <div className="mb-3">
+                <label className='mb-3'>
+                What is the operating system of your device?
+                  </label>
+                  <p>
+                    <input type='radio'
+                    name="Q9"
+                    value="Windows"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Windows                 
+                  </p>
+                  <p>
+                    <input type='radio'
+                    name="Q9"
+                    value="macOS"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    macOS                 
+                  </p>
+                  <p>
+                  <input type='radio'
+                    name="Q9"
+                    value="Linux"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Linux                
+                  </p>
+                  <p>
+                  <input type='radio'
+                    name="Q9"
+                    value="Android"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Android               
+                  </p>
+                  <p>
+                  <input type='radio'
+                    name="Q9"
+                    value="IOS"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    IOS              
+                  </p>
+                </div>
+                <div className="mb-3">
+                <label className='mb-3'>
+                Did you use an external webcam for the video conference? 
+                  </label>
+                  <p>
+                    <input type='radio'
+                    name="Q10"
+                    value="Yes"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    Yes                 
+                  </p>
+                  {Questions.Q10 === "Yes" && (
+                <textarea 
+                name ='Q10_text'
+                value = {Questions.Q10_text}
+                onChange={handleAnswers}
+                placeholder='Please provide the model and make name'
+                required
+                style={{width:"80%"}}
+                ></textarea>
+                )} 
+                 <p>
+                    <input type='radio'
+                    name="Q10"
+                    value="No"
+                    onChange={handleAnswers}
+                    className="me-2"
+                    />
+                    No                 
+                  </p>   
+                        
                   </div>
              
              
