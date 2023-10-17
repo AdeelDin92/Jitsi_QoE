@@ -40,7 +40,7 @@ function PANAS3() {
       .post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_1', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
-        navigate('/Questionair2');
+        navigate('/Questionair4');
       })
       .catch((error) => {
         console.error('Error submitting form:', error);
