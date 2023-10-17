@@ -335,6 +335,16 @@ function Questionair4() {
                 />
                 No 
               </p>
+              {Questions.Q6 === "No" && (
+                <textarea 
+                name ='Q6_text'
+                value = {Questions.Q6_text}
+                onChange={handleAnswers}
+                placeholder='Please provide details'
+                required
+                style={{width:"80%"}}
+                ></textarea>
+              )}
               <p>
                 <input
                   type="radio"
@@ -345,16 +355,7 @@ function Questionair4() {
                 />
                 Yes
               </p>
-              {Questions.Q6 === 'Yes' && (
-                  <textarea
-                    name="Q6_text"
-                    value={Questions.Q6_text}
-                    onChange={handleAnswers}
-                    placeholder="Please provide details"
-                    required
-                    style={{width:"80%"}}
-                  />
-                )}
+              
             </div>
            
            
