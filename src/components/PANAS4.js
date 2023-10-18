@@ -37,7 +37,7 @@ function PANAS4() {
     };
 
     axios
-      .post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_1', formData)
+      .post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_4', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         navigate('/End');

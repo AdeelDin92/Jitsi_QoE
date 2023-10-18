@@ -37,7 +37,7 @@ function PANAS2() {
     };
 
     axios
-      .post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_1', formData)
+      .post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_2', formData)
       .then((response) => {
         console.log('Form submitted successfully!');
         navigate('/Questionair3');
