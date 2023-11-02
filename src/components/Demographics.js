@@ -219,27 +219,47 @@ function Demographics() {
               </div>
               <div className="mb-3">
                 <label className="mb-3">
-                  Are you a native speaker of English?
+                  Which environemnt are you presently at?
                 </label>
                 <p>
                   <input
                     type="radio"
                     name="Q4"
-                    value="Yes"
+                    value="Public"
                     onChange={handleAnswers}
                     className="me-2"
                   />
-                  Yes
+                  Public
                 </p>
                 <p>
                   <input
                     type="radio"
                     name="Q4"
-                    value="No"
+                    value="Private"
                     onChange={handleAnswers}
                     className="me-2"
                   />
-                  No
+                  Private
+                </p>
+                <p>
+                  <input
+                    type="radio"
+                    name="Q4"
+                    value="Public"
+                    onChange={handleAnswers}
+                    className="me-2"
+                  />
+                  Semi-public
+                </p>
+                <p>
+                  <input
+                    type="radio"
+                    name="Q4"
+                    value="Public"
+                    onChange={handleAnswers}
+                    className="me-2"
+                  />
+                  Semi-private
                 </p>
               </div>
               <div className="mb-3">

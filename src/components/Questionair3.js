@@ -233,58 +233,58 @@ function Questionair3() {
               </p>
             </div>
             <div className="mb-3">
-              <label className="mb-3">How would you judge the effort required to interrupt the other party (or parties) ? (Circle one)
+              <label className="mb-3">How would you rate the overall cognitive load you experienced during the video conference? (Circle one)
 
               </label>
               <p>
                 <input
                   type="radio"
                   name="Q4"
-                  value="No effort"
+                  value="Very low cognitive load"
                   onChange={handleAnswers}
                   className="me-2"
                 />
-                No effort
+                Very low cognitive load
               </p>
               <p>
                 <input
                   type="radio"
                   name="Q4"
-                  value="Minor effort"
+                  value="Low cognitive load"
                   onChange={handleAnswers}
                   className="me-2"
                 />
-                Minor effort
+                Low cognitive load
               </p>
               <p>
                 <input
                   type="radio"
                   name="Q4"
-                  value="Moderate effort"
+                  value="Moderate cognitive load"
                   onChange={handleAnswers}
                   className="me-2"
                 />
-                Moderate effort
+                Moderate cognitive load
               </p>
               <p>
                 <input
                   type="radio"
                   name="Q4"
-                  value="Considerable effort"
+                  value="High cognitive load"
                   onChange={handleAnswers}
                   className="me-2"
                 />
-                Considerable effort
+                High cognitive load
               </p>
               <p>
                 <input
                   type="radio"
                   name="Q4"
-                  value="Extreme effort"
+                  value="Very high cognitive load"
                   onChange={handleAnswers}
                   className="me-2"
                 />
-                Extreme effort
+                Very high cognitive load
               </p>
             </div>
             <div className="mb-3">
