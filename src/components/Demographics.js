@@ -385,43 +385,43 @@ function Demographics() {
               </div>
               <div className="mb-3">
                 <label className='mb-3'>
-                  Is there any relationship between you and other partcipants?
+                  Is there any relationship between you and other partcipant?
                   </label>
                   <p>
                     <input type='radio'
                     name="Q7"
-                    value="No,there is no pre-excisting relationship among partcipants"
+                    value="No,there is no pre-excisting relationship"
                     onChange={handleAnswers}
                     className="me-2"
                     />
-                    No,there is no pre-excisting relationship among partcipants                   
+                    No,there is no pre-excisting relationship                    
                   </p>
                   <p>
                     <input type='radio'
                     name="Q7"
-                    value="Some participants know each other outside the study but are not closely related"
+                    value="Yes,know each other outside the study but are not closely related"
                     onChange={handleAnswers}
                     className="me-2"
                     />
-                    Some participants know each other outside the study but are not closely related                  
+                    Yes,know each other outside the study but are not closely related                  
                   </p>
                   <p>
                     <input type='radio'
                     name="Q7"
-                    value="Some participants are friends or acquaintances."
+                    value="Friends or acquaintances."
                     onChange={handleAnswers}
                     className="me-2"
                     />
-                    Some participants are friends or acquaintances                 
+                    Friends or acquaintances                 
                   </p>
                   <p>
                     <input type='radio'
                     name="Q7"
-                    value="Some participants are family members"
+                    value="Collegues or coworker"
                     onChange={handleAnswers}
                     className="me-2"
                     />
-                    Some participants are family members                 
+                    Collegues or coworker                 
                   </p>
                   <p>
                     <input type='radio'
