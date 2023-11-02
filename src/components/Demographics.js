@@ -219,7 +219,7 @@ function Demographics() {
               </div>
               <div className="mb-3">
                 <label className="mb-3">
-                  Which environemnt are you presently at?
+                In which environment are you currently performing the experiment?
                 </label>
                 <p>
                   <input
