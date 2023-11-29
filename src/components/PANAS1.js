@@ -35,6 +35,8 @@ function PANAS1() {
     const formData = {
       ...ratings,
     };
+    //local testing
+    // Please change post URL with: http://localhost:3000/submit_panas_1
 
     axios
       .post('https://drab-jade-bonobo-vest.cyclic.cloud/submit_panas_1', formData)

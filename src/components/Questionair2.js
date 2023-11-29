@@ -27,7 +27,8 @@ function Questionair2() {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-
+    //local testing
+    // Please change post URL with: http://localhost:3000/Questionair_2
     axios.post("https://drab-jade-bonobo-vest.cyclic.cloud/Questionair_2", Questions)
     
       .then((response)=>{
